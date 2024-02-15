@@ -1,7 +1,19 @@
 .rockstyling {
     width: 150px;
     height: 150px;
-    background: url("rock.png");
+    background-image: url("rock.png");
+}
+
+.paperstyling {
+    width: 150px;
+    height: 150px;
+    background-image: url("paper.png");
+}
+
+.scissorsstyling {
+    width: 150px;
+    height: 150px;
+    background-image: url("scissor.png");
 }
 
 .stickybottom {
