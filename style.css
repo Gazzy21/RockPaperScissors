@@ -1,0 +1,11 @@
+.rockstyling {
+    width: 150px;
+    height: 150px;
+    background: url("rock.png");
+}
+
+.stickybottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
