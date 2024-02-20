@@ -11,19 +11,96 @@
       crossorigin="anonymous"
     />
     <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="row stickybottom">
-      <div class="col-4">
-        <button id="rock" class="rockstyling"></button>
+    <div class="container">
+      <div class="row">
+        <img
+          src="rock.png"
+          alt=""
+          id="userimg"
+          class="img-fluid col-6 userimg"
+        />
+        <img
+          src="rock.png"
+          alt=""
+          id="compimg"
+          class="img-fluid col-6 compimg"
+        />
       </div>
-      <div class="col-4 text-center">
-        <button id="paper" class="scissorsstyling"></button>
+
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center">Welcome to Rock Paper Scissors</h1>
+          <p>
+            To play the game Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Nunc condimentum lectus vel lacus porta posuere. Integer
+            volutpat quam lorem, sed luctus lorem facilisis vitae. Donec ornare
+            massa et commodo auctor. Aenean ultricies et diam eget venenatis.
+            Nunc fringilla lobortis tortor a ultricies. Integer sit amet velit
+            enim. Proin sit amet nulla laoreet est laoreet elementum eu id
+            velit. Quisque maximus aliquam neque, accumsan pharetra sem
+            tincidunt sit amet.
+          </p>
+        </div>
       </div>
-      <div class="col-4 text-center">
-        <button id="scissor" class="paperstyling"></button>
+
+      <div class="row">
+        <div class="col-4 text-center">
+          <button id="rock" class="rockstyling">
+            <img src="rock.png" class="img-fluid" />
+          </button>
+        </div>
+        <div class="col-4 text-center">
+          <button id="paper" class="paperstyling">
+            <img src="paper.png" class="img-fluid" />
+          </button>
+        </div>
+        <div class="col-4 text-center">
+          <button id="scissor" class="scissorsstyling">
+            <img src="scissor.png" class="img-fluid" />
+          </button>
+        </div>
       </div>
     </div>
+
+    <!-- Footer START -->
+    <footer class="bg-light text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+
+          <!-- Github -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #333333"
+            href="https://github.com/Gazzy21"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        Nicholas Guzzone © 2023 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"
+          >MDBootstrap.com</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer END -->
 
     <script src="script.js"></script>
     <script

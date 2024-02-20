@@ -1,23 +1,26 @@
+body {
+    overflow-x: hidden;
+}
+
 .rockstyling {
-    width: 150px;
-    height: 150px;
-    background-image: url("rock.png");
+    width: 200px;
+    height: 200px;
 }
 
 .paperstyling {
-    width: 150px;
-    height: 150px;
-    background-image: url("paper.png");
+    width: 200px;
+    height: 200px;
 }
 
 .scissorsstyling {
-    width: 150px;
-    height: 150px;
-    background-image: url("scissor.png");
+    width: 200px;
+    height: 200px;
 }
 
-.stickybottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.userimg {
+    border: 2px solid black;
+}
+
+.compimg {
+    border: 2px solid black;
 }
