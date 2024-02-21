@@ -20,25 +20,35 @@
     />
   </head>
   <body>
+    <div class="row bg-light">
+      <div class="col-12 mt-2">
+        <h1 class="text-center welcome">Welcome to Rock Paper Scissors</h1>
+      </div>
     <div class="container">
-      <div class="row">
-        <img
-          src="rock.png"
-          alt=""
-          id="userimg"
-          class="img-fluid col-6 userimg"
-        />
-        <img
-          src="rock.png"
-          alt=""
-          id="compimg"
-          class="img-fluid col-6 compimg"
-        />
+
+      <div class="row mt-2">
+        <div class="col-5">
+            <h1 class="text-center">User</h1>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5">
+          <h1 class="text-center">Computer</h1>
+      </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-5">
+          <img src="rock.png" alt="" id="userimg" class="img-fluid userimg" />
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5">
+          <img src="rock.png" alt="" id="compimg" class="img-fluid compimg" />
+        </div>
       </div>
 
+      <!-- How to Play START -->
       <div class="row">
-        <div class="col-12">
-          <h1 class="text-center">Welcome to Rock Paper Scissors</h1>
+        <div class="col-12 my-2">
+          <h1 class="text-center">How to Play</h1>
           <p>
             To play the game Lorem ipsum dolor sit amet, consectetur adipiscing
             elit. Nunc condimentum lectus vel lacus porta posuere. Integer
@@ -51,25 +61,32 @@
           </p>
         </div>
       </div>
+      <!-- How to Play END -->
 
-      <div class="row">
+      <!-- The 3 Buttons START -->
+      <div class="row mb-4">
         <div class="col-4 text-center">
-          <button id="rock" class="rockstyling">
+          <button id="rock" class="rockstyling" onclick="playRound('rock')">
             <img src="rock.png" class="img-fluid" />
           </button>
         </div>
         <div class="col-4 text-center">
-          <button id="paper" class="paperstyling">
+          <button id="paper" class="paperstyling" onclick="playRound('paper')">
             <img src="paper.png" class="img-fluid" />
           </button>
         </div>
         <div class="col-4 text-center">
-          <button id="scissor" class="scissorsstyling">
+          <button
+            id="scissor"
+            class="scissorsstyling"
+            onclick="playRound('scissor')"
+          >
             <img src="scissor.png" class="img-fluid" />
           </button>
         </div>
       </div>
     </div>
+    <!-- The 3 Buttons END -->
 
     <!-- Footer START -->
     <footer class="bg-light text-center text-white">
@@ -77,7 +94,6 @@
       <div class="container p-4 pb-0">
         <!-- Section: Social media -->
         <section class="mb-4">
-
           <!-- Github -->
           <a
             class="btn text-white btn-floating m-1"
