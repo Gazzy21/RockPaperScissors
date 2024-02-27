@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Rock Paper Scissors</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,10 +20,13 @@
     />
   </head>
   <body>
+    <br />
     <div class="row">
       <div class="col-1"></div>
       <div class="col-10 mt-2">
-        <h1 class="text-center welcome shadow-pop-br">Welcome to Rock Paper Scissors</h1>
+        <h1 class="text-center welcome shadow-pop-br">
+          Welcome to Rock Paper Scissors
+        </h1>
       </div>
       <div class="col-1"></div>
     </div>
@@ -44,11 +47,21 @@
       <div class="row mt-2">
         <div class="col-1"></div>
         <div class="col-4">
-          <img src="rock.png" alt="" id="userimg" class="img-fluid userimg shadow-pop-br" />
+          <img
+            src="rock.png"
+            alt=""
+            id="userimg"
+            class="img-fluid userimg shadow-pop-br"
+          />
         </div>
         <div class="col-2"></div>
         <div class="col-4">
-          <img src="rock.png" alt="" id="compimg" class="img-fluid compimg shadow-pop-br" />
+          <img
+            src="rock.png"
+            alt=""
+            id="compimg"
+            class="img-fluid compimg shadow-pop-br"
+          />
         </div>
         <div class="col-1"></div>
       </div>
@@ -59,14 +72,9 @@
         <div class="col-12 my-2 howtoplay shadow-pop-br">
           <h1 class="text-center">How to Play</h1>
           <p>
-            To play the game Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Nunc condimentum lectus vel lacus porta posuere. Integer
-            volutpat quam lorem, sed luctus lorem facilisis vitae. Donec ornare
-            massa et commodo auctor. Aenean ultricies et diam eget venenatis.
-            Nunc fringilla lobortis tortor a ultricies. Integer sit amet velit
-            enim. Proin sit amet nulla laoreet est laoreet elementum eu id
-            velit. Quisque maximus aliquam neque, accumsan pharetra sem
-            tincidunt sit amet.
+            To play the game, click the button with either rock, paper, or
+            scissors to set ur choice, then press the "shoot" button to start
+            the round.
           </p>
         </div>
       </div>
@@ -74,7 +82,7 @@
 
       <!-- The 3 Buttons START -->
       <div class="row mb-4">
-        <div class="col-4 text-center">
+        <div class="col-sm-4 col-12 text-center">
           <button
             id="rock"
             class="rockstyling shadow-pop-br"
@@ -83,7 +91,7 @@
             <img src="rock.png" class="img-fluid" />
           </button>
         </div>
-        <div class="col-4 text-center">
+        <div class="col-sm-4 col-12 text-center">
           <button
             id="paper"
             class="paperstyling shadow-pop-br"
@@ -92,7 +100,7 @@
             <img src="paper.png" class="img-fluid" />
           </button>
         </div>
-        <div class="col-4 text-center">
+        <div class="col-sm-4 col-12 text-center">
           <button
             id="scissor"
             class="scissorsstyling shadow-pop-br"
