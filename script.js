@@ -11,13 +11,13 @@ function playRound(userChoice) {
 // setting comp choice to a string value
     if (randomNumber === 0) {
         compChoice = 'rock'
-        compImg.innerHTML = '<img src="rock.png" alt="" id="userImg"class="img-fluid userimg shadow-pop-br"/>'
+        compImg.innerHTML = '<img src="rock.png" alt="" id="userImg" class="img-fluid compimg shadow-pop-br"/>'
     } else if (randomNumber === 1) {
         compChoice = 'paper'
-        compImg.innerHTML = '<img src="paper.png" alt="" id="userImg"class="img-fluid userimg shadow-pop-br"/>'
+        compImg.innerHTML = '<img src="paper.png" alt="" id="userImg" class="img-fluid compimg shadow-pop-br"/>'
     } else if (randomNumber === 2) {
         compChoice = 'scissors'
-        compImg.innerHTML = '<img src="scissors.png" alt="" id="userImg"class="img-fluid userimg shadow-pop-br"/>'
+        compImg.innerHTML = '<img src="scissors.png" alt="" id="userImg" class="img-fluid compimg shadow-pop-br"/>'
     }
 
     console.log(compChoice)
@@ -39,7 +39,4 @@ function playRound(userChoice) {
     } else if (userChoice === 'scissors' && compChoice === 'paper') {
         infoText.innerHTML = '<h1 class="text-center">`${userName}` has won!</h1> <p class="text-center">Score one for humanity!</p>'
     }
-
-  
-    
 }
