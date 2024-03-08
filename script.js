@@ -1,7 +1,8 @@
 document.onload;
 window.onload;
 
-let userName = prompt("Enter your username.");
+let userPrompt = prompt("Enter your username.");
+document.getElementById("userName").innerText=`${userPrompt}`  
 
 infoText = document.getElementById("infoText");
 userImg = document.getElementById("userImg");
@@ -33,15 +34,16 @@ function playRound(userChoice) {
   if (userChoice === compChoice) {
     infoText.innerHTML =
       '<h1 class="text-center">Its a TIE!</h1> <p class="text-center">No one has won, no one has lost. No one gets a point, this round did not count. Try again!</p>';
+      document.getElementById
   } else if (userChoice === "rock" && compChoice === "paper") {
     infoText.innerHTML =
       '<h1 class="text-center">THE ROBOTS WIN</h1> <p class="text-center">Bow down to your new overlords!</p>';
   } else if (userChoice === "rock" && compChoice === "scissors") {
     infoText.innerHTML =
-      '<h1 class="text-center">`${userName}` has won!</h1> <p class="text-center">Score one for humanity!</p>';
+      '<h1 class="text-center"><span id="userName">User</span> has won!</h1> <p class="text-center">Score one for humanity!</p>';
   } else if (userChoice === "paper" && compChoice === "rock") {
     infoText.innerHTML =
-      '<h1 class="text-center">`${userName}` has won!</h1> <p class="text-center">Score one for humanity!</p>';
+      '<h1 class="text-center"><span id="userName">User</span> has won!</h1> <p class="text-center">Score one for humanity!</p>';
   } else if (userChoice === "paper" && compChoice === "scissors") {
     infoText.innerHTML =
       '<h1 class="text-center">THE ROBOTS WIN</h1> <p class="text-center">Bow down to your new overlords!</p>';
@@ -50,11 +52,6 @@ function playRound(userChoice) {
       '<h1 class="text-center">THE ROBOTS WIN</h1> <p class="text-center">Bow down to your new overlords!</p>';
   } else if (userChoice === "scissors" && compChoice === "paper") {
     infoText.innerHTML =
-      '<h1 class="text-center">`${userName}` has won!</h1> <p class="text-center">Score one for humanity!</p>';
-    // userImg.innerHTML =
-    //   '<img src="scissors.png" alt="" id="userImg" class="img-fluid userimg shadow-pop-br"/>';
-    // compImg.innerHTML =
-    //   '<img src="paper.png" alt="" id="compImg" class="img-fluid compimg shadow-pop-br"/>';
-    document.getElementById()
+      '<h1 class="text-center"><span id="userName">User</span> has won!</h1> <p class="text-center">Score one for humanity!</p>';
   }
 }
