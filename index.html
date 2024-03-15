@@ -1,153 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rock Paper Scissors</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link href="style.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <br />
-    <div class="row">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rock Paper Scissors</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <br />
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10 mt-2">
+      <h1 class="text-center welcome shadow-pop-br">
+        Welcome to Rock Paper Scissors
+      </h1>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div class="container">
+    <div class="row mt-2">
       <div class="col-1"></div>
-      <div class="col-10 mt-2">
-        <h1 class="text-center welcome shadow-pop-br">
-          Welcome to Rock Paper Scissors
-        </h1>
+      <div class="col-4">
+        <h1 class="text-center" id="userName">User</h1>
+      </div>
+      <div class="col-2"></div>
+      <div class="col-4">
+        <h1 class="text-center">Computer</h1>
       </div>
       <div class="col-1"></div>
     </div>
-    <div class="container">
-      <div class="row mt-2">
-        <div class="col-1"></div>
-        <div class="col-4">
-          <h1 class="text-center" id="userName">User</h1>
-        </div>
-        <div class="col-2"></div>
-        <div class="col-4">
-          <h1 class="text-center">Computer</h1>
-        </div>
-        <div class="col-1"></div>
-      </div>
 
-      <!-- User and Comp images START -->
-      <div class="row mt-2">
-        <div class="col-1"></div>
-        <div class="col-4">
-          <img
-            src="rock.png"
-            alt=""
-            id="userImg"
-            class="img-fluid userimg shadow-pop-br"
-          />
-        </div>
-        <div class="col-2"></div>
-        <div class="col-4">
-          <img
-            src="rock.png"
-            alt=""
-            id="compImg"
-            class="img-fluid compimg shadow-pop-br"
-          />
-        </div>
-        <div class="col-1"></div>
+    <!-- User and Comp images START -->
+    <div class="row mt-2">
+      <div class="col-1"></div>
+      <div class="col-4">
+        <img src="questionmark.png" alt="" id="userImg" class="img-fluid userimg shadow-pop-br" />
       </div>
-      <!-- User and Comp images END -->
-
-      <!-- How to Play START -->
-      <div class="row my-3">
-        <div id="infoText" class="col-12 my-2 howtoplay shadow-pop-br">
-          <h1 class="text-center">How to Play</h1>
-          <p>
-            To play the game, click the button with either rock, paper, or
-            scissors to set ur choice, then press the "shoot" button to start
-            the round.
-          </p>
-        </div>
+      <div class="col-2 bg-white shadow-pop-br scorediv">
+        <h1 class="text-center">Score</h1>
+        <h1 class="text-center">0-0</h2>
+          <hr>
+          <h1 class="text-center">Round</h1>
+          <h1 class="text-center">0</h2>
       </div>
-      <!-- How to Play END -->
+      <div class="col-4">
+        <img src="questionmark.png" alt="" id="compImg" class="img-fluid compimg shadow-pop-br" />
+      </div>
+      <div class="col-1"></div>
+    </div>
+    <!-- User and Comp images END -->
 
-      <!-- The 3 Buttons START -->
-      <div class="row mb-4">
-        <div class="col-sm-4 col-12 text-center">
-          <button
-            id="rock"
-            class="rockstyling shadow-pop-br"
-            onclick="playRound('rock')"
-          >
-            <img src="rock.png" class="img-fluid" />
-          </button>
-        </div>
-        <div class="col-sm-4 col-12 text-center">
-          <button
-            id="paper"
-            class="paperstyling shadow-pop-br"
-            onclick="playRound('paper')"
-          >
-            <img src="paper.png" class="img-fluid" />
-          </button>
-        </div>
-        <div class="col-sm-4 col-12 text-center">
-          <button
-            id="scissors"
-            class="scissorsstyling shadow-pop-br"
-            onclick="playRound('scissors')"
-          >
-            <img src="scissors.png" class="img-fluid" />
-          </button>
-        </div>
+    <!-- How to Play START -->
+    <div class="row my-3">
+      <div id="infoText" class="col-12 my-2 howtoplay shadow-pop-br">
+        <h1 class="text-center">How to Play</h1>
+        <p>
+          To play the game, click the button with either rock, paper, or
+          scissors to set ur choice, then press the "shoot" button to start
+          the round.
+        </p>
       </div>
     </div>
-    <!-- The 3 Buttons END -->
+    <!-- How to Play END -->
 
-    <!-- Footer START -->
-    <footer class="bg-light text-center text-white lightbackground">
-      <!-- Grid container -->
-      <div class="container p-4 pb-0">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-          <!-- Github -->
-          <a
-            class="btn text-white btn-floating m-1"
-            style="background-color: #333333"
-            href="https://github.com/Gazzy21"
-            role="button"
-            ><i class="fab fa-github"></i
-          ></a>
-        </section>
-        <!-- Section: Social media -->
+    <!-- The 3 Buttons START -->
+    <div class="row mb-4">
+      <div class="col-sm-4 col-12 text-center">
+        <button id="rock" class="rockstyling shadow-pop-br" onclick="playRound('rock')">
+          <img src="rock.png" class="img-fluid" />
+        </button>
       </div>
-      <!-- Grid container -->
-
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        Nicholas Guzzone © 2023 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/"
-          >MDBootstrap.com</a
-        >
+      <div class="col-sm-4 col-12 text-center">
+        <button id="paper" class="paperstyling shadow-pop-br" onclick="playRound('paper')">
+          <img src="paper.png" class="img-fluid" />
+        </button>
       </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer END -->
+      <div class="col-sm-4 col-12 text-center">
+        <button id="scissors" class="scissorsstyling shadow-pop-br" onclick="playRound('scissors')">
+          <img src="scissors.png" class="img-fluid" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- The 3 Buttons END -->
 
-    <script src="script.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <!-- Footer START -->
+  <footer class="bg-light text-center text-white lightbackground">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Github -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #333333" href="https://github.com/Gazzy21"
+          role="button"><i class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      Nicholas Guzzone © 2023 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer END -->
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
